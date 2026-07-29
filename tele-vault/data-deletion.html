@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How to remove TeleVault local data, Telegram bucket content, sessions, and metadata backup packages.">
+  <link rel="canonical" href="https://shagiz-technologies.github.io/tele-vault/data-deletion.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <title>TeleVault Data &amp; Deletion | Shagiz Technologies</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-shell">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">ST</span><span>Shagiz Technologies</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>Menu</button>
+    <nav class="site-nav" id="site-navigation" aria-label="Primary" data-navigation data-open="false"><a href="/">Home</a><a href="/tele-vault/">TeleVault</a><a href="/tele-vault/privacy-policy.html">Privacy</a><a href="/tele-vault/data-deletion.html" aria-current="page">Deletion</a><a href="/tele-vault/support.html">Support</a></nav>
+  </div></header>
+  <main id="main">
+    <header class="legal-hero"><div class="shell"><p class="eyebrow">TeleVault privacy controls</p><h1>Data &amp; Deletion</h1><p class="lede">Local app data and Telegram-hosted backups are stored in different places and must be handled separately.</p></div></header>
+    <div class="shell legal-layout">
+      <nav class="legal-nav" aria-label="Deletion sections"><strong>On this page</strong><a href="#account">Accounts</a><a href="#local">Local data</a><a href="#telegram">Telegram data</a><a href="#metadata">Metadata packages</a><a href="#inquiry">Inquiries</a></nav>
+      <article class="prose">
+        <div class="warning"><strong>Important:</strong> Uninstalling TeleVault does not delete bucket channels, messages, files, or metadata packages stored in Telegram.</div>
+        <h2 id="account">1. TeleVault and Telegram accounts</h2>
+        <p>TeleVault authenticates an existing Telegram account. It does not create a separate Shagiz-operated TeleVault server account in the current implementation. Account recovery, phone-number changes, restrictions, and Telegram account deletion are controlled by Telegram.</p>
+
+        <h2 id="local">2. Local TeleVault data</h2>
+        <p>Local app data can include the Drift/SQLite metadata database, settings, labels, bucket references, upload states, diagnostics, thumbnails or temporary files, vault-related records, metadata-backup state, and TDLib session data.</p>
+        <ol>
+          <li>Pause backup work and verify any upload you intend to keep.</li>
+          <li>Use supported TeleVault logout, deletion, or safe-uninstall controls where appropriate.</li>
+          <li>To remove all local application data on Android, open Android Settings, find TeleVault under Apps, choose Storage, and clear app data. Menu wording varies by device.</li>
+          <li>Uninstall TeleVault to normally remove its application-private local data.</li>
+        </ol>
+        <p>Logging out terminates the local Telegram session. The current implementation must not be assumed to erase every local metadata record merely because logout completed. Clear application data when a complete local reset is required.</p>
+
+        <h2 id="telegram">3. Telegram buckets, messages, and files</h2>
+        <p>Telegram-hosted data remains until it is deleted through Telegram or a supported TeleVault control. To remove it:</p>
+        <ol>
+          <li>Open the relevant bucket channel in Telegram.</li>
+          <li>Delete individual backup messages or delete/leave the channel as appropriate.</li>
+          <li>Review any dedicated TeleVault metadata channel and remove metadata backup messages you no longer need.</li>
+          <li>Confirm deletion in Telegram. Telegram's own retention and deletion behavior applies.</li>
+        </ol>
+        <p>Shagiz Technologies does not operate the authenticated Telegram account and cannot directly delete channels, messages, or files held there. If account access is lost, contact <a href="https://telegram.org/support">Telegram Support</a>.</p>
+
+        <h2 id="metadata">4. Metadata backup packages</h2>
+        <p>Encrypted metadata packages may exist in Telegram, email, downloads, cloud drives, external storage, or any destination selected through sharing. Delete each copy from its storage destination and from trash or recovery folders if complete removal is desired.</p>
+        <p>Deleting a local TeleVault database does not automatically delete exported packages. Deleting an exported package does not delete Telegram media backups.</p>
+
+        <h2>5. Before safe uninstall</h2>
+        <p>Safe Uninstall is an optional preparation flow intended to capture recent metadata before removal. It is not required for Android uninstall, does not guarantee restoration, and does not erase Telegram content. Keep the recovery passphrase separate and verify the backup result before uninstalling.</p>
+
+        <h2 id="inquiry">6. Privacy or deletion inquiries</h2>
+        <div class="blocker"><strong>Deployment blocker:</strong> The approved private contact for deletion inquiries is not yet configured: <code>PRIVACY_CONTACT_EMAIL_REQUIRED</code>.</div>
+        <p>Until it is configured, a non-sensitive process question may be opened through <a href="https://github.com/Shagiz-Technologies/televault/issues/new/choose">GitHub Issues</a>. Do not include a phone number, Telegram username or ID, media, metadata package, database, login code, credentials, or private logs. GitHub Issues cannot be used to authenticate ownership of a Telegram account.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><h2>TeleVault data controls</h2><p>Local deletion and Telegram deletion are separate actions.</p></div><div><h3>Legal</h3><ul class="footer-links"><li><a href="/tele-vault/privacy-policy.html">Privacy</a></li><li><a href="/tele-vault/terms-of-service.html">Terms</a></li></ul></div><div><h3>Help</h3><ul class="footer-links"><li><a href="/tele-vault/support.html">Support</a></li><li><a href="/tele-vault/security.html">Security</a></li></ul></div></div><div class="footer-bottom"><span>&copy; <span data-current-year>2026</span> Shagiz Technologies</span><span>Last updated July 29, 2026</span></div></div></footer>
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
+

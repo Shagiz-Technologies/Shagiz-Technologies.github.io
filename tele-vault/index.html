@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TeleVault is an independent open-source Android media backup and vault application that uses private Telegram channels as storage buckets.">
+  <link rel="canonical" href="https://shagiz-technologies.github.io/tele-vault/">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <title>TeleVault | Android media backup and vault</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="/" aria-label="Shagiz Technologies home">
+        <span class="brand-mark" aria-hidden="true">ST</span>
+        <span>Shagiz Technologies</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary" data-navigation data-open="false">
+        <a href="/">Home</a>
+        <a href="/tele-vault/" aria-current="page">TeleVault</a>
+        <a href="/tele-vault/privacy-policy.html">Privacy</a>
+        <a href="/tele-vault/support.html">Support</a>
+        <a href="https://github.com/Shagiz-Technologies/televault">Source</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Independent open-source Android app</p>
+          <h1>Your media. Your Telegram space. Clear boundaries.</h1>
+          <p class="lede">TeleVault organizes photos and videos and can back them up to private Telegram channels connected through your Telegram account.</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/Shagiz-Technologies/televault">View source code</a>
+            <a class="button secondary" href="/tele-vault/privacy-policy.html">Read the privacy policy</a>
+          </div>
+        </div>
+        <aside class="signal-card" aria-label="TeleVault storage model">
+          <span class="signal-dot" aria-hidden="true"></span>
+          <h2>No Shagiz media-storage backend</h2>
+          <p>In the current implementation, Telegram and TDLib handle authentication, channel access, and uploaded files.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section tint">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2>A local app connected to Telegram</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Scan and organize</h3>
+            <p>TeleVault reads selected device media and keeps file, bucket, label, and sync metadata in a local Drift/SQLite database.</p>
+          </article>
+          <article class="card">
+            <h3>Choose a bucket</h3>
+            <p>A bucket maps to a private Telegram channel. TDLib uses your authenticated Telegram session to create or access it.</p>
+          </article>
+          <article class="card">
+            <h3>Upload with status</h3>
+            <p>The local queue tracks pending, uploading, completed, and failed work. Availability still depends on the device, network, TDLib, and Telegram.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Security boundary</p>
+          <h2>Vault encryption is not the same as normal backup</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Normal uploads</h3>
+            <p>Normal non-vault media is not currently client-side encrypted by TeleVault before it is uploaded to Telegram.</p>
+          </article>
+          <article class="card">
+            <h3>Vault-protected media</h3>
+            <p>Media moved through the TeleVault vault flow is encrypted by TeleVault. Vault access can be protected with a TeleVault credential or supported device authentication.</p>
+          </article>
+          <article class="card">
+            <h3>Independent backups</h3>
+            <p>Storage capacity, availability, and permanence are subject to Telegram's services and policies. Keep another backup of files you cannot replace.</p>
+          </article>
+        </div>
+        <div class="warning">
+          <strong>Independent project:</strong> TeleVault is not affiliated with, endorsed by, or sponsored by Telegram. Telegram and TDLib are third-party services and components with their own terms and privacy practices.
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Legal and support</p>
+          <h2>Know what applies</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card"><h3><a href="/tele-vault/privacy-policy.html">Privacy Policy</a></h3><p>What the app accesses, stores locally, and sends to Telegram.</p></article>
+          <article class="card"><h3><a href="/tele-vault/terms-of-service.html">Terms of Service</a></h3><p>Responsibilities, dependencies, limits, and acceptable use.</p></article>
+          <article class="card"><h3><a href="/tele-vault/data-deletion.html">Data &amp; Deletion</a></h3><p>How local data and Telegram-hosted backups are removed.</p></article>
+          <article class="card"><h3><a href="/tele-vault/support.html">Support</a></h3><p>Where to report bugs, request features, or get Telegram help.</p></article>
+          <article class="card"><h3><a href="/tele-vault/security.html">Security</a></h3><p>Supported versions, limitations, and coordinated disclosure.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div><h2>TeleVault</h2><p>Open-source Android media backup and vault software from Shagiz Technologies.</p></div>
+        <div><h3>Legal</h3><ul class="footer-links"><li><a href="/tele-vault/privacy-policy.html">Privacy Policy</a></li><li><a href="/tele-vault/terms-of-service.html">Terms</a></li><li><a href="/tele-vault/data-deletion.html">Data deletion</a></li></ul></div>
+        <div><h3>Project</h3><ul class="footer-links"><li><a href="/tele-vault/support.html">Support</a></li><li><a href="/tele-vault/security.html">Security</a></li><li><a href="https://github.com/Shagiz-Technologies/televault">GitHub</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span data-current-year>2026</span> Shagiz Technologies</span><span>Not affiliated with Telegram.</span></div>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
+

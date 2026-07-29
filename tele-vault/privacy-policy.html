@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consumer-facing Privacy Policy for the TeleVault Android application.">
+  <link rel="canonical" href="https://shagiz-technologies.github.io/tele-vault/privacy-policy.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <title>TeleVault Privacy Policy | Shagiz Technologies</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">ST</span><span>Shagiz Technologies</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary" data-navigation data-open="false">
+        <a href="/">Home</a><a href="/tele-vault/">TeleVault</a><a href="/tele-vault/privacy-policy.html" aria-current="page">Privacy</a><a href="/tele-vault/support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="legal-hero">
+      <div class="shell">
+        <p class="eyebrow">TeleVault legal center</p>
+        <h1>Privacy Policy</h1>
+        <p class="lede"><strong>Developer:</strong> Shagiz Technologies<br><strong>Application:</strong> TeleVault<br><strong>Effective:</strong> July 29, 2026<br><strong>Last updated:</strong> July 29, 2026</p>
+      </div>
+    </header>
+    <div class="shell legal-layout">
+      <nav class="legal-nav" aria-label="Privacy Policy sections">
+        <strong>On this page</strong>
+        <a href="#scope">Scope</a>
+        <a href="#data">Data accessed</a>
+        <a href="#telegram">Telegram and TDLib</a>
+        <a href="#encryption">Encryption</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#retention">Retention and deletion</a>
+        <a href="#security">Security</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <article class="prose">
+        <div class="blocker" role="alert">
+          <strong>Deployment blocker:</strong> An approved, monitored public privacy email has not yet been provided. <code>PRIVACY_CONTACT_EMAIL_REQUIRED</code> must be replaced before this policy is treated as production-ready.
+        </div>
+
+        <h2 id="scope">1. Scope and definitions</h2>
+        <p>This policy explains how the TeleVault Android application accesses, stores, and transmits information. It applies to the distributed application and its current open-source implementation. It does not replace Telegram's privacy policy or terms.</p>
+        <p><strong>"Local"</strong> means data stored on the device where TeleVault is installed. <strong>"Telegram"</strong> means the third-party Telegram service accessed through TDLib. <strong>"Bucket"</strong> means a Telegram channel selected or created for TeleVault backup.</p>
+
+        <h2 id="data">2. Data the application accesses</h2>
+        <h3>Photos, videos, and media metadata</h3>
+        <p>With Android permission, TeleVault scans photos and videos available through the device media library. It may access media bytes and metadata needed for display, organization, deduplication, queueing, and backup, including asset identifiers, file names, paths exposed by Android, media type, size, dimensions, timestamps, album relationships, hashes, labels, and sync state.</p>
+        <h3>Telegram authentication and account information</h3>
+        <p>TeleVault uses TDLib to authenticate an existing Telegram account. Depending on the authentication state, Telegram may require a phone number, login code, two-step verification password, or other account security step. TeleVault also receives Telegram account profile information and channel information required to display the signed-in account and manage buckets.</p>
+        <p>Authentication requests and Telegram data are processed by TDLib and Telegram. Users must never send login codes, passwords, API credentials, or Telegram session files to Shagiz Technologies through a public issue.</p>
+        <h3>Local diagnostics</h3>
+        <p>The reviewed implementation includes local diagnostics and operational records used to troubleshoot app behavior. No external analytics or telemetry SDK was identified during the open-source preparation audit. Diagnostics must not intentionally include private media content, authentication credentials, or secrets. Users should review and redact logs before sharing them.</p>
+
+        <h2>3. Data stored locally</h2>
+        <p>TeleVault uses a local Drift/SQLite database and device storage for application state. Local data may include bucket records, media metadata, labels, upload status, Telegram message references, retry information, settings, vault flags, metadata-backup state, and local diagnostic entries. TDLib separately stores Telegram session and database files in the application's private storage.</p>
+        <p>Credentials and derived security values intended for protected storage use platform storage mechanisms where implemented. Device compromise, unlocked devices, insecure backups, and operating-system vulnerabilities can still expose local data.</p>
+
+        <h2 id="telegram">4. Data transmitted to Telegram</h2>
+        <p>When a backup runs, selected media and related upload information are sent through TDLib to Telegram channels associated with the authenticated account. TeleVault may also upload encrypted metadata backup packages to a dedicated or selected Telegram channel when that feature is enabled or invoked.</p>
+        <p>Telegram and TDLib process authentication, channel access, message creation, file transfer, storage, and retrieval. Telegram has its own privacy practices, infrastructure, account controls, terms, limits, and retention behavior. A channel being private does not mean Telegram is technically unable to process its content, and TeleVault does not control Telegram's infrastructure.</p>
+        <p>TeleVault does not operate a separate media-storage backend in the current implementation. Shagiz Technologies does not have application-server access to user bucket channels. This does not eliminate processing by Telegram, operating systems, app distribution platforms, network providers, or user-selected sharing destinations.</p>
+
+        <h2 id="encryption">5. Vault and encryption boundaries</h2>
+        <div class="warning">
+          <strong>Normal backup limitation:</strong> Normal non-vault photos and videos are not currently client-side encrypted by TeleVault before upload to Telegram.
+        </div>
+        <p>Media intentionally moved through TeleVault's vault flow is encrypted by TeleVault before its vault upload path. Vault encryption protects that flow, not every media upload. Vault security depends on the user's TeleVault credential or supported device authentication, key handling, device security, and correct use of the feature.</p>
+        <p>TeleVault does not claim end-to-end encryption for ordinary backups. Telegram's treatment of uploaded files is governed by Telegram's implementation and policies.</p>
+
+        <h2>6. Metadata backup behavior</h2>
+        <p>TeleVault can create encrypted metadata backup packages for recovery and safe-uninstall workflows. Depending on configuration, packages may be shared by the user or uploaded to Telegram. A metadata package can contain application metadata needed to reconstruct buckets and file states; it is not necessarily a copy of every media file.</p>
+        <p>Users are responsible for protecting passphrases and deleting old packages from Telegram, email, file storage, or any other destination they selected. Losing a passphrase may make an encrypted package unrecoverable.</p>
+
+        <h2 id="permissions">7. Android permissions and purposes</h2>
+        <ul>
+          <li><strong>Photos and videos / media library:</strong> scan, display, organize, select, and back up supported media.</li>
+          <li><strong>Internet:</strong> communicate with Telegram through TDLib and open user-selected web resources.</li>
+          <li><strong>Notifications:</strong> show backup progress and foreground synchronization status where Android requires or permits it.</li>
+          <li><strong>Foreground data sync:</strong> continue eligible auto-backup work while TeleVault is not visible.</li>
+          <li><strong>Biometric or device authentication:</strong> use supported device security for app or vault access when the user enables it.</li>
+          <li><strong>Legacy external storage access on older Android versions:</strong> read supported media where modern scoped media permissions are unavailable.</li>
+        </ul>
+        <p>Permission availability and behavior vary by Android version, device vendor, and user choice. Denying a permission may disable the related feature.</p>
+
+        <h2>8. Third-party libraries and services</h2>
+        <p>TeleVault uses Flutter and open-source packages for application functions, including TDLib/libtdjson for Telegram access, Drift/SQLite for local metadata, media-library plugins, secure storage, local authentication, connectivity, notifications, file selection, and sharing. Package licenses are available in the application and source repository.</p>
+        <p>Telegram is the primary third-party network service in the backup flow. Links opened from TeleVault may be handled by the user's browser and are subject to that browser and destination's policies.</p>
+
+        <h2 id="retention">9. Retention and deletion</h2>
+        <p>Local metadata remains until the app deletes it, the user clears application storage, or Android removes it during uninstall. Logging out terminates the local Telegram session, but users should not assume that logout deletes every local metadata record unless the current app flow explicitly confirms that action.</p>
+        <p>Uninstalling TeleVault normally removes its local application data. It does <strong>not</strong> automatically delete Telegram bucket channels, messages, files, or metadata packages stored in Telegram or elsewhere. Users must delete those items from Telegram, supported TeleVault controls, or the destination where they stored a package.</p>
+        <p>Shagiz Technologies cannot directly delete data held in a user-controlled Telegram account. See <a href="/tele-vault/data-deletion.html">Data &amp; Deletion</a> for practical steps.</p>
+
+        <h2 id="security">10. Security safeguards and limitations</h2>
+        <p>TeleVault uses application-private storage, platform secure storage where implemented, encrypted vault and metadata-package flows, and Telegram's authenticated TDLib session. No safeguard can guarantee security. Device compromise, weak credentials, misconfiguration, software defects, dependency vulnerabilities, network attacks, and Telegram account compromise remain possible.</p>
+        <p>Keep Android updated, use strong device security and Telegram two-step verification, protect metadata passphrases, and retain an independent backup of important files.</p>
+
+        <h2>11. Children</h2>
+        <p>TeleVault is not designed or marketed specifically for children. Eligibility also depends on Telegram's terms and applicable law. A parent or guardian should supervise use where required.</p>
+
+        <h2>12. International third-party processing</h2>
+        <p>Telegram and other platform providers may process data in countries different from the user's country. Their processing locations and safeguards are governed by their own policies and applicable law. Shagiz Technologies does not select Telegram's processing locations.</p>
+
+        <h2>13. Policy changes</h2>
+        <p>This policy may change as TeleVault features, dependencies, permissions, or legal requirements change. The effective and last-updated dates will be revised, and material changes should be communicated through the application, release notes, repository, or this site where practical.</p>
+
+        <h2 id="contact">14. Contact</h2>
+        <p>The required public privacy contact is currently blocked pending an approved email: <strong>PRIVACY_CONTACT_EMAIL_REQUIRED</strong>.</p>
+        <p>Until that contact exists, non-sensitive process questions may be submitted through <a href="https://github.com/Shagiz-Technologies/televault/issues/new/choose">TeleVault GitHub Issues</a>. Do not post personal information, account identifiers, private media, metadata packages, database files, credentials, or unredacted logs publicly. Security vulnerabilities must use <a href="https://github.com/Shagiz-Technologies/televault/security/advisories/new">Private Vulnerability Reporting</a>.</p>
+
+        <h2>Related documents</h2>
+        <ul>
+          <li><a href="/tele-vault/terms-of-service.html">Terms of Service</a></li>
+          <li><a href="/tele-vault/support.html">Support</a></li>
+          <li><a href="/tele-vault/data-deletion.html">Data &amp; Deletion</a></li>
+          <li><a href="/tele-vault/security.html">Security</a></li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div><h2>TeleVault legal center</h2><p>Consumer-facing policies for the TeleVault Android application.</p></div>
+        <div><h3>Legal</h3><ul class="footer-links"><li><a href="/tele-vault/privacy-policy.html">Privacy</a></li><li><a href="/tele-vault/terms-of-service.html">Terms</a></li><li><a href="/tele-vault/data-deletion.html">Deletion</a></li></ul></div>
+        <div><h3>Help</h3><ul class="footer-links"><li><a href="/tele-vault/support.html">Support</a></li><li><a href="/tele-vault/security.html">Security</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span data-current-year>2026</span> Shagiz Technologies</span><span>Last updated July 29, 2026</span></div>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
+

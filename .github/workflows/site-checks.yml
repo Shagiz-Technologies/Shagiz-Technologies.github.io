@@ -1,0 +1,30 @@
+name: Site checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate HTML and links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Verify generated redirects
+        run: |
+          python3 scripts/generate_redirects.py
+          git diff --exit-code
+
+      - name: Validate site
+        run: python3 scripts/validate_site.py --external
+
