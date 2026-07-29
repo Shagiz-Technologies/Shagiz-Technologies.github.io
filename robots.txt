@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://shagiz-technologies.github.io/sitemap.xml
-

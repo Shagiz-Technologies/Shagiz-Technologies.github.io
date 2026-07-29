@@ -35,4 +35,3 @@
     year.textContent = String(new Date().getFullYear());
   }
 })();
-
