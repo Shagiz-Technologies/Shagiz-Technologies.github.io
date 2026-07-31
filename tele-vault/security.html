@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TeleVault security support policy, limitations, supported versions, and coordinated vulnerability disclosure.">
+  <link rel="canonical" href="https://shagiz-technologies.github.io/tele-vault/security.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <title>TeleVault Security | Shagiz Technologies</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-shell">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">ST</span><span>Shagiz Technologies</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>Menu</button>
+    <nav class="site-nav" id="site-navigation" aria-label="Primary" data-navigation data-open="false"><a href="/">Home</a><a href="/tele-vault/">TeleVault</a><a href="/tele-vault/privacy-policy.html">Privacy</a><a href="/tele-vault/security.html" aria-current="page">Security</a><a href="/tele-vault/support.html">Support</a></nav>
+  </div></header>
+  <main id="main">
+    <header class="legal-hero"><div class="shell"><p class="eyebrow">Coordinated disclosure</p><h1>Security</h1><p class="lede">Report vulnerabilities privately and give maintainers time to investigate before public disclosure.</p></div></header>
+    <div class="shell legal-layout">
+      <nav class="legal-nav" aria-label="Security sections"><strong>On this page</strong><a href="#report">Report privately</a><a href="#versions">Supported versions</a><a href="#areas">Sensitive areas</a><a href="#limits">Limitations</a></nav>
+      <article class="prose">
+        <h2 id="report">1. Report a vulnerability</h2>
+        <p>Use <a href="https://github.com/Shagiz-Technologies/televault/security/advisories/new">GitHub Private Vulnerability Reporting</a> as the primary reporting path. Include affected versions, impact, reproducible steps, and a minimal proof of concept without real user data.</p>
+        <div class="warning"><strong>Do not use public issues</strong> for exploit details, credentials, Telegram session material, personal media, database files, metadata backups, unredacted logs, or active attack information.</div>
+        <p>If private reporting is unavailable, open only a minimal public issue stating that a private security contact is needed. Do not include sensitive details.</p>
+
+        <h2 id="versions">2. Supported versions</h2>
+        <p>Security fixes target the latest source on the default branch and the latest published Android build, when one exists. Older builds, unofficial binaries, modified forks, and experimental platforms may not receive fixes.</p>
+        <p>Response and remediation times are targets rather than guarantees. See the repository <a href="https://github.com/Shagiz-Technologies/televault/security/policy">security policy</a> for the current support table and reporting expectations.</p>
+
+        <h2 id="areas">3. Security-sensitive areas</h2>
+        <ul>
+          <li>Telegram authentication, TDLib sessions, API credentials, and channel access.</li>
+          <li>Vault encryption, key derivation, credential reset, biometrics, and decrypted temporary files.</li>
+          <li>App lock, retry limits, lockout state, and device-authentication boundaries.</li>
+          <li>Media permissions, file selection, sharing, deletion, restore, and local paths.</li>
+          <li>Metadata package encryption, import conflict handling, safe uninstall, and Telegram metadata channels.</li>
+          <li>Drift/SQLite metadata, secure storage, logs, notifications, build signing, and native libraries.</li>
+          <li>Background services, upload confirmation, bucket routing, and dependency supply chain.</li>
+        </ul>
+
+        <h2 id="limits">4. Current security limitations</h2>
+        <ul>
+          <li>Normal non-vault uploads are not currently client-side encrypted by TeleVault before upload.</li>
+          <li>Telegram and TDLib remain third-party trust dependencies.</li>
+          <li>Application metadata is stored locally and local database encryption is not guaranteed by this policy.</li>
+          <li>Rooted, compromised, or unlocked devices can undermine application safeguards.</li>
+          <li>Background execution, permissions, and secure storage vary by Android device and version.</li>
+          <li>Open-source review reduces opacity but does not guarantee the absence of vulnerabilities.</li>
+        </ul>
+        <p>TeleVault makes no guarantee of complete security, uninterrupted service, or successful recovery. Keep independent backups and use strong device and Telegram account security.</p>
+
+        <h2>5. Recognition and disclosure</h2>
+        <p>Maintainers may coordinate disclosure timing and acknowledge reporters with permission after a fix is available. Do not access data beyond what is necessary, disrupt users, demand payment, or publicly disclose an unresolved vulnerability without coordination.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><h2>TeleVault security</h2><p>No security guarantees. Report vulnerabilities responsibly.</p></div><div><h3>Report</h3><ul class="footer-links"><li><a href="https://github.com/Shagiz-Technologies/televault/security/advisories/new">Private vulnerability report</a></li><li><a href="https://github.com/Shagiz-Technologies/televault/security/policy">Repository policy</a></li></ul></div><div><h3>Legal</h3><ul class="footer-links"><li><a href="/tele-vault/privacy-policy.html">Privacy</a></li><li><a href="/tele-vault/terms-of-service.html">Terms</a></li></ul></div></div><div class="footer-bottom"><span>&copy; <span data-current-year>2026</span> Shagiz Technologies</span><span>Last updated July 29, 2026</span></div></div></footer>
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
