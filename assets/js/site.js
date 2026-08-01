@@ -4,11 +4,10 @@
   const isTeleVault = window.location.pathname.startsWith("/tele-vault");
   document.body.classList.add(isTeleVault ? "televault-theme" : "shagiz-theme");
 
-  if (!document.querySelector('link[data-brand-styles]')) {
+  if (!document.querySelector('link[href="/assets/css/brand-overrides.css"]')) {
     const brandStyles = document.createElement("link");
     brandStyles.rel = "stylesheet";
     brandStyles.href = "/assets/css/brand-overrides.css";
-    brandStyles.dataset.brandStyles = "true";
     document.head.appendChild(brandStyles);
   }
 
