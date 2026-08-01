@@ -1,0 +1,237 @@
+/* Brand layer generated from the approved Shagiz logo and TeleVault's in-repo logo painter. */
+
+:root {
+  --ink: #07152f;
+  --muted: #526176;
+  --line: #d9e1ea;
+  --paper: #fbfcfe;
+  --surface: #ffffff;
+  --surface-alt: #f2f6fa;
+  --green: #009e5a;
+  --green-dark: #007a45;
+  --blue: #163e78;
+  --amber: #d99a00;
+  --danger: #bb2635;
+  --shadow: 0 20px 54px rgba(7, 21, 47, 0.12);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(0, 158, 90, 0.07), transparent 28rem),
+    radial-gradient(circle at 92% 18%, rgba(217, 154, 0, 0.07), transparent 24rem),
+    linear-gradient(rgba(7, 21, 47, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 21, 47, 0.028) 1px, transparent 1px),
+    var(--paper);
+  background-size: auto, auto, 32px 32px, 32px 32px, auto;
+}
+
+.site-header {
+  border-bottom-color: rgba(217, 225, 234, 0.92);
+  background: rgba(251, 252, 254, 0.93);
+}
+
+.brand {
+  color: #07152f;
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  color: transparent;
+  background: url("/assets/brand/shagiz-mark.svg") center / contain no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.hero-brand-lockup {
+  width: min(100%, 470px);
+  height: auto;
+  margin: 0 0 28px;
+  display: block;
+}
+
+.footer-brand-lockup {
+  width: min(100%, 300px);
+  height: auto;
+  margin: 0 0 18px;
+  filter: brightness(0) invert(1);
+  opacity: 0.96;
+}
+
+.product-icon.product-icon-image {
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.product-icon.product-icon-image img {
+  width: 96px;
+  height: 96px;
+  display: block;
+  filter: drop-shadow(0 16px 24px rgba(10, 132, 255, 0.2));
+}
+
+.signal-card {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(0, 158, 90, 0.32), transparent 42%),
+    linear-gradient(145deg, #07152f, #102b56);
+}
+
+.signal-dot {
+  background: #17d679;
+  box-shadow: 0 0 0 8px rgba(23, 214, 121, 0.14);
+}
+
+body.televault-theme {
+  --ink: #052d72;
+  --muted: #496785;
+  --line: #cfe3f7;
+  --paper: #f7fbff;
+  --surface: #ffffff;
+  --surface-alt: #eaf5ff;
+  --green: #0a84ff;
+  --green-dark: #0a66d8;
+  --blue: #20d6ff;
+  --amber: #148fff;
+  --danger: #b52f4d;
+  --shadow: 0 20px 58px rgba(10, 102, 216, 0.15);
+  background:
+    radial-gradient(circle at 14% 7%, rgba(32, 214, 255, 0.15), transparent 30rem),
+    radial-gradient(circle at 88% 12%, rgba(10, 132, 255, 0.12), transparent 30rem),
+    linear-gradient(rgba(10, 132, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 132, 255, 0.035) 1px, transparent 1px),
+    var(--paper);
+  background-size: auto, auto, 32px 32px, 32px 32px, auto;
+}
+
+.televault-theme .site-header {
+  border-bottom-color: rgba(207, 227, 247, 0.94);
+  background: rgba(247, 251, 255, 0.94);
+}
+
+.televault-theme .site-nav a:hover,
+.televault-theme .site-nav a[aria-current="page"] {
+  color: #0a66d8;
+  background: #eaf5ff;
+}
+
+.televault-theme .button {
+  background: #0a84ff;
+  border-color: #0a84ff;
+  box-shadow: 0 12px 28px rgba(10, 132, 255, 0.23);
+}
+
+.televault-theme .button:hover {
+  background: #0a66d8;
+  border-color: #0a66d8;
+}
+
+.televault-theme .button.secondary {
+  color: #052d72;
+  background: #fff;
+  border-color: #cfe3f7;
+  box-shadow: none;
+}
+
+.televault-theme .signal-card {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.26), transparent 36%),
+    linear-gradient(145deg, #20d6ff 0%, #148fff 48%, #0b4fd7 100%);
+}
+
+.televault-theme .signal-dot {
+  background: #fff;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.18);
+}
+
+.televault-theme .section.tint {
+  background: rgba(234, 245, 255, 0.88);
+  border-color: #cfe3f7;
+}
+
+.televault-theme .tag-list li {
+  color: #0a66d8;
+  background: #eaf5ff;
+  border-color: #c7e2fb;
+}
+
+.televault-theme .site-footer {
+  background: #052d72;
+}
+
+.televault-brand-lockup {
+  margin: 0 0 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.televault-brand-lockup img {
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
+  filter: drop-shadow(0 18px 28px rgba(10, 132, 255, 0.24));
+}
+
+.televault-brand-lockup strong {
+  display: block;
+  color: #052d72;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.televault-brand-lockup span {
+  display: block;
+  margin-top: 6px;
+  color: #0a66d8;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.televault-theme .notice {
+  background: #eaf5ff;
+  border-left-color: #0a84ff;
+}
+
+.televault-theme .warning {
+  background: #eef8ff;
+  border-left-color: #148fff;
+}
+
+@media (max-width: 640px) {
+  .brand {
+    gap: 8px;
+    font-size: 0.96rem;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .hero-brand-lockup {
+    width: min(100%, 360px);
+  }
+
+  .televault-brand-lockup img {
+    width: 64px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+
+  .televault-brand-lockup strong {
+    font-size: 2.2rem;
+  }
+}
