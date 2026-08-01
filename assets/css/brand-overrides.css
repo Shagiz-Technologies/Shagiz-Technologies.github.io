@@ -166,6 +166,14 @@ body.televault-theme {
   background: #052d72;
 }
 
+.televault-theme .site-footer .footer-product-name {
+  color: #fff;
+}
+
+.televault-theme .site-footer .footer-product-byline {
+  color: #d8efff;
+}
+
 .televault-brand-lockup {
   margin: 0 0 24px;
   display: inline-flex;
