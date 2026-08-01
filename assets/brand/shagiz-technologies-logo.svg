@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Shagiz Technologies</title>
+  <desc id="desc">Shagiz Technologies logo with a circuit-inspired S mark.</desc>
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17243b"/>
+      <stop offset="1" stop-color="#06142d"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00b86b"/>
+      <stop offset="1" stop-color="#007a45"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7c93e"/>
+      <stop offset="1" stop-color="#d18a00"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 3) scale(.79)">
+    <path d="M382 58H218c-83 0-145 51-145 124 0 67 49 104 119 113l76 10c28 4 43 17 43 38 0 28-24 47-62 47H77l-24 64h194c85 0 146-51 146-125 0-68-45-104-119-115l-76-10c-28-4-43-16-43-37 0-27 24-45 61-45h142c12-10 20-20 24-34Z" fill="url(#navy)"/>
+    <path d="M82 178C63 123 86 72 135 48c28-14 61-18 93-13-70 7-120 46-146 143Z" fill="url(#green)"/>
+    <path d="M356 299c25 54 15 105-27 145-21 20-49 33-80 38 62-22 97-70 107-183Z" fill="url(#gold)"/>
+    <path d="M329 445c-23 20-51 32-81 37 41-16 72-42 94-76-3 15-8 28-13 39Z" fill="#e31e2f"/>
+    <path d="M216 135l9 23 23 9-23 9-9 23-9-23-23-9 23-9Z" fill="#e6a400"/>
+    <g fill="none" stroke="#0b1933" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M58 318h86l115-115h92"/>
+      <path d="M134 371l142-142"/>
+      <path d="M198 359l93-93"/>
+    </g>
+    <g fill="#fff" stroke="#0b1933" stroke-width="8">
+      <circle cx="58" cy="318" r="14"/>
+      <circle cx="351" cy="203" r="14"/>
+      <circle cx="134" cy="371" r="12"/>
+      <circle cx="198" cy="359" r="12"/>
+    </g>
+    <circle cx="276" cy="229" r="11" fill="#0b1933"/>
+  </g>
+  <rect x="370" y="80" width="3" height="275" rx="2" fill="#0b1933"/>
+  <text x="430" y="265" fill="url(#navy)" font-family="Arial, Helvetica, sans-serif" font-size="180" font-weight="800" letter-spacing="-9">Shagiz</text>
+  <rect x="1004" y="92" width="18" height="18" fill="#e6a400"/>
+  <text x="438" y="347" fill="#0b1933" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="600" letter-spacing="18">TECHNOLOGIES</text>
+</svg>

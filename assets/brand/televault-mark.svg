@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">TeleVault logo</title>
+  <desc id="desc">A white cloud and Telegram-inspired paper plane on a blue gradient tile with a lock badge.</desc>
+  <defs>
+    <linearGradient id="tv-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#20D6FF"/>
+      <stop offset="0.52" stop-color="#148FFF"/>
+      <stop offset="1" stop-color="#0B4FD7"/>
+    </linearGradient>
+    <radialGradient id="tv-glow" cx="0.18" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tv-shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0A84FF" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect x="28" y="28" width="456" height="456" rx="112" fill="url(#tv-bg)" filter="url(#tv-shadow)"/>
+  <rect x="28" y="28" width="456" height="456" rx="112" fill="url(#tv-glow)"/>
+  <g fill="#fff">
+    <circle cx="202" cy="261" r="68"/>
+    <circle cx="274" cy="229" r="91"/>
+    <circle cx="338" cy="270" r="60"/>
+    <rect x="146" y="251" width="240" height="101" rx="51"/>
+  </g>
+  <path d="M180 271 366 209 304 353 266 295 222 329 236 288Z" fill="#0A84FF"/>
+  <path d="M266 295 319 241" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="357" cy="373" r="72" fill="#fff" fill-opacity=".98"/>
+  <circle cx="357" cy="373" r="72" fill="none" stroke="#052D72" stroke-opacity=".18" stroke-width="9"/>
+  <rect x="325" y="366" width="64" height="52" rx="12" fill="#0A66D8"/>
+  <path d="M334 366v-17c0-27 46-27 46 0v17" fill="none" stroke="#0A66D8" stroke-width="12" stroke-linecap="round"/>
+</svg>
