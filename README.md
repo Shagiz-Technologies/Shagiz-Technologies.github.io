@@ -25,8 +25,10 @@ requests run validation only and never deploy.
 
 Canonical origin: <https://shagiz-technologies.github.io/>
 
-## Deployment blocker
+## Privacy inquiries
 
-`PRIVACY_CONTACT_EMAIL_REQUIRED` must be replaced with an approved, monitored
-public privacy email before the TeleVault legal center is treated as
-production-ready.
+The TeleVault Privacy Policy provides a public GitHub inquiry mechanism for
+non-sensitive privacy and deletion-process questions. Credentials, personal
+media, Telegram identifiers, databases, session material, metadata snapshots,
+and Recovery Keys must never be posted publicly. Security vulnerabilities use
+GitHub Private Vulnerability Reporting.
