@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How to remove TeleVault local data, Telegram bucket content, sessions, and metadata backup packages.">
+  <meta name="description" content="How to remove TeleVault local data, Telegram bucket content, sessions, Vault files, and metadata snapshots.">
   <link rel="canonical" href="https://shagiz-technologies.github.io/tele-vault/data-deletion.html">
   <link rel="stylesheet" href="/assets/css/site.css">
   <title>TeleVault Data &amp; Deletion | Shagiz Technologies</title>
@@ -15,49 +15,53 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>Menu</button>
     <nav class="site-nav" id="site-navigation" aria-label="Primary" data-navigation data-open="false"><a href="/">Home</a><a href="/tele-vault/">TeleVault</a><a href="/tele-vault/privacy-policy.html">Privacy</a><a href="/tele-vault/data-deletion.html" aria-current="page">Deletion</a><a href="/tele-vault/support.html">Support</a></nav>
   </div></header>
+
   <main id="main">
-    <header class="legal-hero"><div class="shell"><p class="eyebrow">TeleVault privacy controls</p><h1>Data &amp; Deletion</h1><p class="lede">Local app data and Telegram-hosted backups are stored in different places and must be handled separately.</p></div></header>
+    <header class="legal-hero"><div class="shell"><p class="eyebrow">TeleVault privacy controls</p><h1>Data &amp; Deletion</h1><p class="lede">Local TeleVault data and remote Telegram backups are stored in different places and must be removed separately.</p></div></header>
     <div class="shell legal-layout">
-      <nav class="legal-nav" aria-label="Deletion sections"><strong>On this page</strong><a href="#account">Accounts</a><a href="#local">Local data</a><a href="#telegram">Telegram data</a><a href="#metadata">Metadata packages</a><a href="#inquiry">Inquiries</a></nav>
+      <nav class="legal-nav" aria-label="Deletion sections"><strong>On this page</strong><a href="#account">Accounts</a><a href="#local">Local data</a><a href="#telegram">Telegram data</a><a href="#vault">Vault</a><a href="#inquiry">Inquiries</a></nav>
       <article class="prose">
-        <div class="warning"><strong>Important:</strong> Uninstalling TeleVault does not delete bucket channels, messages, files, or metadata packages stored in Telegram.</div>
+        <div class="warning"><strong>Important:</strong> Logging out, clearing app data, or uninstalling TeleVault does not automatically delete channels, messages, media, or metadata snapshots stored in Telegram.</div>
+
         <h2 id="account">1. TeleVault and Telegram accounts</h2>
-        <p>TeleVault authenticates an existing Telegram account. It does not create a separate Shagiz-operated TeleVault server account in the current implementation. Account recovery, phone-number changes, restrictions, and Telegram account deletion are controlled by Telegram.</p>
+        <p>TeleVault authenticates an existing Telegram account. It does not create a separate Shagiz-operated cloud account. Telegram controls phone-number changes, login codes, account recovery, restrictions, and Telegram account deletion.</p>
 
-        <h2 id="local">2. Local TeleVault data</h2>
-        <p>Local app data can include the Drift/SQLite metadata database, settings, labels, bucket references, upload states, diagnostics, thumbnails or temporary files, vault-related records, metadata-backup state, and TDLib session data.</p>
+        <h2 id="local">2. Remove local TeleVault data</h2>
+        <p>Local data can include the Drift/SQLite database, settings, bucket references, labels, queue state, diagnostics, thumbnails, temporary files, TDLib sessions, metadata-backup state, and Vault-related records.</p>
         <ol>
-          <li>Pause backup work and verify any upload you intend to keep.</li>
-          <li>Use supported TeleVault logout, deletion, or safe-uninstall controls where appropriate.</li>
-          <li>To remove all local application data on Android, open Android Settings, find TeleVault under Apps, choose Storage, and clear app data. Menu wording varies by device.</li>
-          <li>Uninstall TeleVault to normally remove its application-private local data.</li>
+          <li>Verify any upload you intend to keep directly in Telegram.</li>
+          <li>Use TeleVault's logout flow. It cancels scheduled background work, stops active synchronization, closes the local Telegram session, and removes local account data, TDLib storage, temporary files, and account secrets.</li>
+          <li>When prompted, choose whether encrypted local Vault objects and installed recovery material should be retained or removed.</li>
+          <li>For a complete local reset, open Android Settings, select TeleVault under Apps, and clear app storage, or uninstall TeleVault.</li>
         </ol>
-        <p>Logging out terminates the local Telegram session. The current implementation must not be assumed to erase every local metadata record merely because logout completed. Clear application data when a complete local reset is required.</p>
+        <p>Android menu wording varies by manufacturer. Clearing app storage or uninstalling normally removes application-private local data.</p>
 
-        <h2 id="telegram">3. Telegram buckets, messages, and files</h2>
-        <p>Telegram-hosted data remains until it is deleted through Telegram or a supported TeleVault control. To remove it:</p>
+        <h2 id="telegram">3. Remove Telegram buckets, messages, and media</h2>
+        <p>Remote content remains in the user's Telegram account until the user removes it. To delete remote backup data:</p>
         <ol>
           <li>Open the relevant bucket channel in Telegram.</li>
-          <li>Delete individual backup messages or delete/leave the channel as appropriate.</li>
-          <li>Review any dedicated TeleVault metadata channel and remove metadata backup messages you no longer need.</li>
-          <li>Confirm deletion in Telegram. Telegram's own retention and deletion behavior applies.</li>
+          <li>Delete individual backup messages, or delete/leave the channel as appropriate.</li>
+          <li>Review the TeleVault metadata channel and delete encrypted metadata snapshots no longer needed.</li>
+          <li>Confirm deletion in Telegram. Telegram's own deletion and retention behavior applies.</li>
         </ol>
-        <p>Shagiz Technologies does not operate the authenticated Telegram account and cannot directly delete channels, messages, or files held there. If account access is lost, contact <a href="https://telegram.org/support">Telegram Support</a>.</p>
+        <p>Shagiz Technologies does not operate the user's Telegram account and cannot directly delete its channels, messages, media, or snapshots. For Telegram account access or account deletion, use <a href="https://telegram.org/support">Telegram Support</a> and Telegram's own account controls.</p>
 
-        <h2 id="metadata">4. Metadata backup packages</h2>
-        <p>Encrypted metadata packages may exist in Telegram, email, downloads, cloud drives, external storage, or any destination selected through sharing. Delete each copy from its storage destination and from trash or recovery folders if complete removal is desired.</p>
-        <p>Deleting a local TeleVault database does not automatically delete exported packages. Deleting an exported package does not delete Telegram media backups.</p>
+        <h2 id="vault">4. Vault objects and Recovery Key</h2>
+        <p>Vault objects are encrypted by TeleVault before their Vault upload path. Deleting the local app database does not necessarily delete encrypted Vault objects stored in Telegram. Delete the corresponding Telegram messages or bucket channel when remote removal is required.</p>
+        <p>Deleting or losing the Vault Recovery Key can make remaining encrypted Vault objects permanently unrecoverable. Confirm that no needed Vault backup remains before destroying the final Recovery Key copy.</p>
 
-        <h2>5. Before safe uninstall</h2>
-        <p>Safe Uninstall is an optional preparation flow intended to capture recent metadata before removal. It is not required for Android uninstall, does not guarantee restoration, and does not erase Telegram content. Keep the recovery passphrase separate and verify the backup result before uninstalling.</p>
+        <h2>5. Metadata snapshots and Safe Uninstall</h2>
+        <p>Encrypted metadata v5 snapshots may be stored in Telegram. Safe Uninstall can create and verify a recent metadata snapshot before local removal, but it does not erase Telegram content and does not guarantee that every file or device-local path can be restored.</p>
+        <p>Delete every exported metadata copy from Telegram, downloads, email, external storage, or other destinations selected by the user when complete removal is desired.</p>
 
-        <h2 id="inquiry">6. Privacy or deletion inquiries</h2>
-        <div class="blocker"><strong>Deployment blocker:</strong> The approved private contact for deletion inquiries is not yet configured: <code>PRIVACY_CONTACT_EMAIL_REQUIRED</code>.</div>
-        <p>Until it is configured, a non-sensitive process question may be opened through <a href="https://github.com/Shagiz-Technologies/televault/issues/new/choose">GitHub Issues</a>. Do not include a phone number, Telegram username or ID, media, metadata package, database, login code, credentials, or private logs. GitHub Issues cannot be used to authenticate ownership of a Telegram account.</p>
+        <h2 id="inquiry">6. Privacy or deletion-process inquiries</h2>
+        <p>Non-sensitive questions may be submitted through <a href="https://github.com/Shagiz-Technologies/televault/issues/new?title=Deletion%20or%20privacy%20inquiry%3A%20">TeleVault GitHub Issues</a>.</p>
+        <p>Do not include phone numbers, Telegram usernames or IDs, login codes, credentials, private media, databases, metadata snapshots, session files, Recovery Keys, or unredacted logs. GitHub Issues cannot authenticate ownership of a Telegram account and Shagiz Technologies cannot delete Telegram-hosted data on a user's behalf.</p>
       </article>
     </div>
   </main>
-  <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><h2>TeleVault data controls</h2><p>Local deletion and Telegram deletion are separate actions.</p></div><div><h3>Legal</h3><ul class="footer-links"><li><a href="/tele-vault/privacy-policy.html">Privacy</a></li><li><a href="/tele-vault/terms-of-service.html">Terms</a></li></ul></div><div><h3>Help</h3><ul class="footer-links"><li><a href="/tele-vault/support.html">Support</a></li><li><a href="/tele-vault/security.html">Security</a></li></ul></div></div><div class="footer-bottom"><span>&copy; <span data-current-year>2026</span> Shagiz Technologies</span><span>Last updated July 29, 2026</span></div></div></footer>
+
+  <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><h2>TeleVault data controls</h2><p>Local deletion and Telegram deletion are separate actions.</p></div><div><h3>Legal</h3><ul class="footer-links"><li><a href="/tele-vault/privacy-policy.html">Privacy</a></li><li><a href="/tele-vault/terms-of-service.html">Terms</a></li></ul></div><div><h3>Help</h3><ul class="footer-links"><li><a href="/tele-vault/support.html">Support</a></li><li><a href="/tele-vault/security.html">Security</a></li></ul></div></div><div class="footer-bottom"><span>&copy; <span data-current-year>2026</span> Shagiz Technologies</span><span>Last updated August 1, 2026</span></div></div></footer>
   <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
